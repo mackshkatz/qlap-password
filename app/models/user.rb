@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
 		# A New organization should be created with the
 		# same name and be flagged as a single-person
 		# organization
-		Organization.create( :is_single_person => true, :name => User.name )
+		Organization.create( :is_single_person => true, :name => self.name )
 	end
 end
